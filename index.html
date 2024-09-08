@@ -1,0 +1,246 @@
+<html><head><base href="https://sabiduriadeloalto.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sabiduría de lo Alto - Canal de YouTube</title><style>
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.left-panel {
+    width: 300px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.video-section {
+    margin-bottom: 20px;
+}
+
+.video-section h3 {
+    color: #f1c40f;
+    border-bottom: 1px solid #f1c40f;
+    padding-bottom: 5px;
+}
+
+.video-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.video-list li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.intro {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#currentVideo {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.search-box {
+    display: flex;
+}
+
+#searchInput {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #f1c40f;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f39c12;
+}
+
+.social-share {
+    margin-top: 20px;
+}
+
+.social-share a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.author-info {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+</style></head><body>
+    <div class="container">
+        <div class="left-panel" id="videoPanel">
+            <!-- Video sections will be dynamically added here -->
+        </div>
+        <div class="main-content">
+            <div class="intro">
+                <h1>Bienvenidos a Sabiduría de lo Alto</h1>
+                <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras, nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en este viaje de descubrimiento y crecimiento espiritual.</p>
+            </div>
+            <iframe id="currentVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar videos...">
+                    <button onclick="searchVideos()">Buscar</button>
+                </div>
+                <button onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
+            </div>
+            <div class="social-share">
+                <a href="#" onclick="shareOnFacebook()">Facebook</a>
+                <a href="#" onclick="shareOnWhatsApp()">WhatsApp</a>
+                <a href="#" onclick="shareOnTwitter()">Twitter</a>
+                <a href="#" onclick="shareOnInstagram()">Instagram</a>
+                <a href="#" onclick="shareOnTikTok()">TikTok</a>
+            </div>
+            <div class="author-info">
+                <h2>Sobre el Autor</h2>
+                <p>Apasionado por la tecnología y administrador financiero de profesión, mucho gusto. Mi nombre es José Ángel Ochoa Álvarez, tengo 28 años y soy oriundo de El Carmen de Bolívar, Bolívar. Para mí, es un placer que visites mi página web. Puedes encontrarme en mi canal de YouTube @sabiduriadeloalto donde seguiré subiendo más videos relacionados con la misma temática. Muchas gracias por tu atención.</p>
+                <p>Para más información contactarme al correo electrónico: <a href="mailto:sabiduriadeloalto03@gmail.com">sabiduriadeloalto03@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+<script>
+const videos = {
+    "Videos de Amor": [
+        {id: "FXAfUFhafsI", title: "Amor Divino"},
+        {id: "ajsbFJdOZGE", title: "El Poder del Amor"}
+    ],
+    "Videos de Fe": [
+        {id: "W3yi54Z5Fk4", title: "Fortalecer la Fe"}
+    ],
+    "Videos de Abundancia": [
+        {id: "p8vA9Hj88HM", title: "Prosperidad Espiritual"}
+    ],
+    "Videos de Felicidad": [
+        {id: "kZ-gw26lFcw", title: "Alegría en Cristo"},
+        {id: "zrSDG4DGSHc", title: "Gozo Espiritual"},
+        {id: "_vbws3WZ4sY", title: "Felicidad Verdadera"},
+        {id: "NTr_l9bdhZA", title: "Paz Interior"},
+        {id: "LKYuKL5MyXU", title: "Vivir con Propósito"}
+    ],
+    "Videos de Intimidad con Dios": [
+        {id: "H_05FmHcqlM", title: "Cercanía Divina"},
+        {id: "2z1pKAVoJMk", title: "Comunión con Dios"},
+        {id: "oTLZ2Tk5QPs", title: "Oración Profunda"},
+        {id: "TPLzAGD5H6M", title: "Presencia de Dios"}
+    ]
+};
+
+let currentVideoIndex = 0;
+let currentCategory = "";
+
+function loadVideos() {
+    const panel = document.getElementById('videoPanel');
+    panel.innerHTML = '';
+
+    for (const [category, videoList] of Object.entries(videos)) {
+        const section = document.createElement('div');
+        section.className = 'video-section';
+        section.innerHTML = `<h3>${category}</h3>`;
+        
+        const ul = document.createElement('ul');
+        ul.className = 'video-list';
+        
+        videoList.forEach((video, index) => {
+            const li = document.createElement('li');
+            li.textContent = video.title;
+            li.onclick = () => playVideo(category, index);
+            ul.appendChild(li);
+        });
+        
+        section.appendChild(ul);
+        panel.appendChild(section);
+    }
+}
+
+function playVideo(category, index) {
+    currentCategory = category;
+    currentVideoIndex = index;
+    const video = videos[category][index];
+    document.getElementById('currentVideo').src = `https://www.youtube.com/embed/${video.id}`;
+}
+
+function searchVideos() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    for (const [category, videoList] of Object.entries(videos)) {
+        const foundIndex = videoList.findIndex(video => video.title.toLowerCase().includes(query));
+        if (foundIndex !== -1) {
+            playVideo(category, foundIndex);
+            return;
+        }
+    }
+    alert("No se encontraron videos con ese título.");
+}
+
+function shareOnFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+}
+
+function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://wa.me/?text=${url}`, '_blank');
+}
+
+function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("¡Mira este increíble canal de YouTube sobre sabiduría espiritual!");
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+}
+
+function shareOnInstagram() {
+    alert("Para compartir en Instagram, copia el enlace de la página y pégalo en tu historia o post de Instagram.");
+}
+
+function shareOnTikTok() {
+    alert("Para compartir en TikTok, copia el enlace de la página y pégalo en tu video o biografía de TikTok.");
+}
+
+window.onload = () => {
+    loadVideos();
+    playVideo(Object.keys(videos)[0], 0);
+};
+</script>
+</body></html>
