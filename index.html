@@ -1,147 +1,159 @@
-<html><head><base href="https://sabiduriadeloalto.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sabiduría de lo Alto - Canal de YouTube</title><style>
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+<html>
 
-.container {
-    display: flex;
-    flex: 1;
-}
+<head>
+    <base href="https://sabiduriadeloalto.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabiduría de lo Alto - Canal de YouTube</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-.left-panel {
-    width: 300px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    overflow-y: auto;
-}
+        .container {
+            display: flex;
+            flex: 1;
+        }
 
-.video-section {
-    margin-bottom: 20px;
-}
+        .left-panel {
+            width: 300px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            overflow-y: auto;
+        }
 
-.video-section h3 {
-    color: #f1c40f;
-    border-bottom: 1px solid #f1c40f;
-    padding-bottom: 5px;
-}
+        .video-section {
+            margin-bottom: 20px;
+        }
 
-.video-list {
-    list-style-type: none;
-    padding: 0;
-}
+        .video-section h3 {
+            color: #f1c40f;
+            border-bottom: 1px solid #f1c40f;
+            padding-bottom: 5px;
+        }
 
-.video-list li {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
+        .video-list {
+            list-style-type: none;
+            padding: 0;
+        }
 
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
+        .video-list li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
 
-.intro {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
 
-#currentVideo {
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
-    display: block;
-    margin: 0 auto;
-}
+        .intro {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
 
-.controls {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
+        #currentVideo {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            display: block;
+            margin: 0 auto;
+        }
 
-.search-box {
-    display: flex;
-}
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
 
-#searchInput {
-    padding: 5px;
-    margin-right: 10px;
-}
+        .search-box {
+            display: flex;
+        }
 
-button {
-    background-color: #f1c40f;
-    color: #000;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+        #searchInput {
+            padding: 5px;
+            margin-right: 10px;
+        }
 
-button:hover {
-    background-color: #f39c12;
-}
+        button {
+            background-color: #f1c40f;
+            color: #000;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-.social-share {
-    margin-top: 20px;
-}
+        button:hover {
+            background-color: #f39c12;
+        }
 
-.social-share a {
-    margin-right: 10px;
-    color: #fff;
-    text-decoration: none;
-}
+        .social-share {
+            margin-top: 20px;
+        }
 
-.author-info {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    text-align: center;
-}
+        .social-share a {
+            margin-right: 10px;
+            color: #fff;
+            text-decoration: none;
+        }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-}
+        .author-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+        }
 
-.social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-}
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <div class="left-panel" id="videoPanel">
-            <!-- Aqui se agregaran las secciones de vídeo -->        
+            <!-- Aqui se agregaran las secciones de vídeo -->
         </div>
         <div class="main-content">
             <div class="intro">
-                <img src="/a/11640405-9333-49b3-bd6f-d27ee5977938" alt="Logo de Sabiduría de lo Alto" class="logo">
+                <img src="nuevologo.jpg" alt="Logo de Sabiduría de lo Alto" class="logo">
                 <h1>Bienvenidos a Sabiduría de lo Alto</h1>
-                <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras, nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en este viaje de descubrimiento y crecimiento espiritual.</p>
+                <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de
+                    nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras,
+                    nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en
+                    este viaje de descubrimiento y crecimiento espiritual.</p>
             </div>
             <iframe id="currentVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <div class="controls">
@@ -149,102 +161,110 @@ button:hover {
                     <input type="text" id="searchInput" placeholder="Buscar videos...">
                     <button onclick="searchVideos()">Buscar</button>
                 </div>
-                <button onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
+                <button
+                    onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
             </div>
             <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
                 <a href="https://wa.me/573005188416" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://x.com/sabiduriad95033" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
             <div class="author-info">
                 <h2>Sobre el Autor</h2>
-                <p>Apasionado por la tecnología y administrador financiero de profesión, mucho gusto. Mi nombre es José Ángel Ochoa Álvarez, tengo 28 años y soy oriundo de El Carmen de Bolívar, Bolívar. Para mí, es un placer que visites mi página web. Puedes encontrarme en mi canal de YouTube @sabiduriadeloalto donde seguiré subiendo más videos relacionados con la misma temática. Muchas gracias por tu atención.</p>
-                <p>Para más información contactarme al correo electrónico: <a href="mailto:sabiduriadeloalto03@gmail.com">sabiduriadeloalto03@gmail.com</a></p>
+                <p>Apasionado por la tecnología y administrador financiero de profesión, mucho gusto. Mi nombre es José
+                    Ángel Ochoa Álvarez, tengo 28 años y soy oriundo de El Carmen de Bolívar, Bolívar. Para mí, es un
+                    placer que visites mi página web. Puedes encontrarme en mi canal de YouTube @sabiduriadeloalto donde
+                    seguiré subiendo más videos relacionados con la misma temática. Muchas gracias por tu atención.</p>
+                <p>Para más información contactarme al correo electrónico: <a
+                        href="mailto:sabiduriadeloalto03@gmail.com">sabiduriadeloalto03@gmail.com</a></p>
             </div>
         </div>
     </div>
 
-<script>
-const videos = {
-    "Videos Recientes": [
-        {id: "eIM5SGKw9b0", title: "La música y sus verdades"},
-        {id: "Jp4FWhk6j9Y", title: "¿Usted sabía que hay canciones cristianas diabólicas?"},
-        {id: "ApZ3v5UWVD4", title: "El clásico y el actual"}
-    ],
-    "Videos de Amor": [
-        {id: "FXAfUFhafsI", title: "Amor Divino"},
-        {id: "ajsbFJdOZGE", title: "El Poder del Amor"}
-    ],
-    "Videos de Fe": [
-        {id: "W3yi54Z5Fk4", title: "Fortalecer la Fe"}
-    ],
-    "Videos de Abundancia": [
-        {id: "p8vA9Hj88HM", title: "Prosperidad Espiritual"}
-    ],
-    "Videos de Felicidad": [
-        {id: "kZ-gw26lFcw", title: "Alegría en Cristo"},
-        {id: "zrSDG4DGSHc", title: "Gozo Espiritual"},
-        {id: "_vbws3WZ4sY", title: "Felicidad Verdadera"},
-        {id: "NTr_l9bdhZA", title: "Paz Interior"},
-        {id: "LKYuKL5MyXU", title: "Vivir con Propósito"}
-    ],
-    "Videos de Intimidad con Dios": [
-        {id: "H_05FmHcqlM", title: "Cercanía Divina"},
-        {id: "2z1pKAVoJMk", title: "Comunión con Dios"},
-        {id: "oTLZ2Tk5QPs", title: "Oración Profunda"},
-        {id: "TPLzAGD5H6M", title: "Presencia de Dios"}
-    ]
-};
+    <script>
+        const videos = {
+            "Videos Recientes": [
+                { id: "eIM5SGKw9b0", title: "La música y sus verdades" },
+                { id: "Jp4FWhk6j9Y", title: "¿Usted sabía que hay canciones cristianas diabólicas?" },
+                { id: "ApZ3v5UWVD4", title: "El clásico y el actual" }
+            ],
+            "Videos de Amor": [
+                { id: "FXAfUFhafsI", title: "Amor Divino" },
+                { id: "ajsbFJdOZGE", title: "El Poder del Amor" }
+            ],
+            "Videos de Fe": [
+                { id: "W3yi54Z5Fk4", title: "Fortalecer la Fe" }
+            ],
+            "Videos de Abundancia": [
+                { id: "p8vA9Hj88HM", title: "Prosperidad Espiritual" }
+            ],
+            "Videos de Felicidad": [
+                { id: "kZ-gw26lFcw", title: "Alegría en Cristo" },
+                { id: "zrSDG4DGSHc", title: "Gozo Espiritual" },
+                { id: "_vbws3WZ4sY", title: "Felicidad Verdadera" },
+                { id: "NTr_l9bdhZA", title: "Paz Interior" },
+                { id: "LKYuKL5MyXU", title: "Vivir con Propósito" }
+            ],
+            "Videos de Intimidad con Dios": [
+                { id: "H_05FmHcqlM", title: "Cercanía Divina" },
+                { id: "2z1pKAVoJMk", title: "Comunión con Dios" },
+                { id: "oTLZ2Tk5QPs", title: "Oración Profunda" },
+                { id: "TPLzAGD5H6M", title: "Presencia de Dios" }
+            ]
+        };
 
-let currentVideoIndex = 0;
-let currentCategory = "";
+        let currentVideoIndex = 0;
+        let currentCategory = "";
 
-function loadVideos() {
-    const panel = document.getElementById('videoPanel');
-    panel.innerHTML = '';
+        function loadVideos() {
+            const panel = document.getElementById('videoPanel');
+            panel.innerHTML = '';
 
-    for (const [category, videoList] of Object.entries(videos)) {
-        const section = document.createElement('div');
-        section.className = 'video-section';
-        section.innerHTML = `<h3>${category}</h3>`;
-        
-        const ul = document.createElement('ul');
-        ul.className = 'video-list';
-        
-        videoList.forEach((video, index) => {
-            const li = document.createElement('li');
-            li.textContent = video.title;
-            li.onclick = () => playVideo(category, index);
-            ul.appendChild(li);
-        });
-        
-        section.appendChild(ul);
-        panel.appendChild(section);
-    }
-}
+            for (const [category, videoList] of Object.entries(videos)) {
+                const section = document.createElement('div');
+                section.className = 'video-section';
+                section.innerHTML = `<h3>${category}</h3>`;
 
-function playVideo(category, index) {
-    currentCategory = category;
-    currentVideoIndex = index;
-    const video = videos[category][index];
-    document.getElementById('currentVideo').src = `https://www.youtube.com/embed/${video.id}`;
-}
+                const ul = document.createElement('ul');
+                ul.className = 'video-list';
 
-function searchVideos() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    for (const [category, videoList] of Object.entries(videos)) {
-        const foundIndex = videoList.findIndex(video => video.title.toLowerCase().includes(query));
-        if (foundIndex !== -1) {
-            playVideo(category, foundIndex);
-            return;
+                videoList.forEach((video, index) => {
+                    const li = document.createElement('li');
+                    li.textContent = video.title;
+                    li.onclick = () => playVideo(category, index);
+                    ul.appendChild(li);
+                });
+
+                section.appendChild(ul);
+                panel.appendChild(section);
+            }
         }
-    }
-    alert("No se encontraron videos con ese título.");
-}
 
-window.onload = () => {
-    loadVideos();
-    playVideo("Videos Recientes", 0);
-};
-</script>
-</body></html>
+        function playVideo(category, index) {
+            currentCategory = category;
+            currentVideoIndex = index;
+            const video = videos[category][index];
+            document.getElementById('currentVideo').src = `https://www.youtube.com/embed/${video.id}`;
+        }
+
+        function searchVideos() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            for (const [category, videoList] of Object.entries(videos)) {
+                const foundIndex = videoList.findIndex(video => video.title.toLowerCase().includes(query));
+                if (foundIndex !== -1) {
+                    playVideo(category, foundIndex);
+                    return;
+                }
+            }
+            alert("No se encontraron videos con ese título.");
+        }
+
+        window.onload = () => {
+            loadVideos();
+            playVideo("Videos Recientes", 0);
+        };
+    </script>
+</body>
+
+</html>
