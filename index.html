@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center center fixed;
+    background: url('nuevologo.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     min-height: 100vh;
@@ -108,13 +108,38 @@ button:hover {
     margin-top: 20px;
     text-align: center;
 }
-</style></head><body>
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
     <div class="container">
         <div class="left-panel" id="videoPanel">
-            <!-- Video sections will be dynamically added here -->
+            <!-- Aqui se agregaran las secciones de vídeo -->        
         </div>
         <div class="main-content">
             <div class="intro">
+                <img src="/a/11640405-9333-49b3-bd6f-d27ee5977938" alt="Logo de Sabiduría de lo Alto" class="logo">
                 <h1>Bienvenidos a Sabiduría de lo Alto</h1>
                 <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras, nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en este viaje de descubrimiento y crecimiento espiritual.</p>
             </div>
@@ -126,12 +151,10 @@ button:hover {
                 </div>
                 <button onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
             </div>
-            <div class="social-share">
-                <a href="#" onclick="shareOnFacebook()">Facebook</a>
-                <a href="#" onclick="shareOnWhatsApp()">WhatsApp</a>
-                <a href="#" onclick="shareOnTwitter()">Twitter</a>
-                <a href="#" onclick="shareOnInstagram()">Instagram</a>
-                <a href="#" onclick="shareOnTikTok()">TikTok</a>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/573005188416" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://x.com/sabiduriad95033" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
             <div class="author-info">
                 <h2>Sobre el Autor</h2>
@@ -143,6 +166,11 @@ button:hover {
 
 <script>
 const videos = {
+    "Videos Recientes": [
+        {id: "eIM5SGKw9b0", title: "La música y sus verdades"},
+        {id: "Jp4FWhk6j9Y", title: "¿Usted sabía que hay canciones cristianas diabólicas?"},
+        {id: "ApZ3v5UWVD4", title: "El clásico y el actual"}
+    ],
     "Videos de Amor": [
         {id: "FXAfUFhafsI", title: "Amor Divino"},
         {id: "ajsbFJdOZGE", title: "El Poder del Amor"}
@@ -214,33 +242,9 @@ function searchVideos() {
     alert("No se encontraron videos con ese título.");
 }
 
-function shareOnFacebook() {
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-}
-
-function shareOnWhatsApp() {
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://wa.me/?text=${url}`, '_blank');
-}
-
-function shareOnTwitter() {
-    const url = encodeURIComponent(window.location.href);
-    const text = encodeURIComponent("¡Mira este increíble canal de YouTube sobre sabiduría espiritual!");
-    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
-}
-
-function shareOnInstagram() {
-    alert("Para compartir en Instagram, copia el enlace de la página y pégalo en tu historia o post de Instagram.");
-}
-
-function shareOnTikTok() {
-    alert("Para compartir en TikTok, copia el enlace de la página y pégalo en tu video o biografía de TikTok.");
-}
-
 window.onload = () => {
     loadVideos();
-    playVideo(Object.keys(videos)[0], 0);
+    playVideo("Videos Recientes", 0);
 };
 </script>
 </body></html>
