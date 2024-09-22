@@ -1,282 +1,387 @@
-<html>
+<html><head><base href="https://joseochoa1995.github.io/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabiduría de lo Alto - Canal de YouTube</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-<head>
-    <base href="https://joseochoa1995.github.io/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabiduría de lo Alto - Canal de YouTube</title>
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+    .container {
+      display: flex;
+      flex: 1;
+    }
 
-        .container {
-            display: flex;
-            flex: 1;
-        }
+    .left-panel {
+      width: 300px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      overflow-y: auto;
+    }
 
-        .left-panel {
-            width: 300px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            overflow-y: auto;
-        }
+    .video-section {
+      margin-bottom: 20px;
+    }
 
-        .video-section {
-            margin-bottom: 20px;
-        }
+    .video-section h3 {
+      color: #f1c40f;
+      border-bottom: 1px solid #f1c40f;
+      padding-bottom: 5px;
+    }
 
-        .video-section h3 {
-            color: #f1c40f;
-            border-bottom: 1px solid #f1c40f;
-            padding-bottom: 5px;
-        }
+    .video-list {
+      list-style-type: none;
+      padding: 0;
+    }
 
-        .video-list {
-            list-style-type: none;
-            padding: 0;
-        }
+    .video-list li {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
 
-        .video-list li {
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
 
-        .main-content {
-            flex: 1;
-            padding: 20px;
-        }
+    .intro {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-        .intro {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    #currentVideo {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      display: block;
+      margin: 0 auto;
+    }
 
-        #currentVideo {
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            display: block;
-            margin: 0 auto;
-        }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
 
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
+    .search-box {
+      display: flex;
+    }
 
-        .search-box {
-            display: flex;
-        }
+    #searchInput {
+      padding: 5px;
+      margin-right: 10px;
+    }
 
-        #searchInput {
-            padding: 5px;
-            margin-right: 10px;
-        }
+    button {
+      background-color: #f1c40f;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-        button {
-            background-color: #f1c40f;
-            color: #000;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+    button:hover {
+      background-color: #f39c12;
+    }
 
-        button:hover {
-            background-color: #f39c12;
-        }
+    .social-share {
+      margin-top: 20px;
+    }
 
-        .social-share {
-            margin-top: 20px;
-        }
+    .social-share a {
+      margin-right: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
 
-        .social-share a {
-            margin-right: 10px;
-            color: #fff;
-            text-decoration: none;
-        }
+    .author-info {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
 
-        .author-info {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            text-align: center;
-        }
+    .logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: block;
+    }
 
-        .logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: block;
-        }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+    }
 
-        .social-icons a {
-            margin: 0 10px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 24px;
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    .welcome-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .welcome-modal h2 {
+      font-family: 'Playfair Display', serif;
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .welcome-modal p {
+      font-family: 'Lato', sans-serif;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .welcome-modal input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .welcome-modal button {
+      background-color: #f1c40f;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .welcome-modal button:hover {
+      background-color: #f39c12;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #999;
+      cursor: pointer;
+    }
+
+    .visit-counter {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #000;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .visit-counter span {
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="left-panel" id="videoPanel">
-            <!-- Aqui se agregaran las secciones de vídeo -->
-        </div>
-        <div class="main-content">
-            <div class="intro">
-                <img src="https://github.com/joseochoa03/joseochoa03.github.io/blob/main/nuevologo.jpg?raw=true"
-                    alt="Logo de Sabiduría de lo Alto" class="logo">
-               
-                <h1>Bienvenidos a Sabiduría de lo Alto</h1>
-                <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de
-                    nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras,
-                    nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en
-                    este viaje de descubrimiento y crecimiento espiritual.</p>
-            </div>
-            <iframe id="currentVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <div class="controls">
-                <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Buscar videos...">
-                    <button onclick="searchVideos()">Buscar</button>
-                </div>
-                <button
-                    onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i
-                        class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/573005188416" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://x.com/sabiduriad95033" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="author-info">
-                <h2>Sobre el Autor</h2>
-                <p>Apasionado por la tecnología y administrador financiero de profesión, mucho gusto. Mi nombre es José
-                    Ángel Ochoa Álvarez, tengo 28 años y soy oriundo de El Carmen de Bolívar, Bolívar. Para mí, es un
-                    placer que visites mi página web. Puedes encontrarme en mi canal de YouTube @sabiduriadeloalto donde
-                    seguiré subiendo más videos relacionados con la misma temática. Muchas gracias por tu atención.</p>
-                <p>Para más información contactarme al correo electrónico: <a
-                        href="mailto:sabiduriadeloalto03@gmail.com">sabiduriadeloalto03@gmail.com</a></p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="left-panel" id="videoPanel">
+      <!-- Secciones de vídeo -->
     </div>
+    <div class="main-content">
+      <div class="intro">
+        <img src="https://github.com/joseochoa03/joseochoa03.github.io/blob/main/nuevologo.jpg?raw=true"
+          alt="Logo de Sabiduría de lo Alto" class="logo">
+        <h1>Bienvenidos a Sabiduría de lo Alto</h1>
+        <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de
+          nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras,
+          nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en
+          este viaje de descubrimiento y crecimiento espiritual.</p>
+      </div>
+      <iframe id="currentVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class="controls">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Buscar videos...">
+          <button onclick="searchVideos()">Buscar</button>
+        </div>
+        <button
+          onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i
+            class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/573005188416" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://x.com/sabiduriad95033" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="author-info">
+        <h2>Sobre el Autor</h2>
+        <p>Apasionado por la tecnología y administrador financiero de profesión, mucho gusto. Mi nombre es José
+          Ángel Ochoa Álvarez, tengo 28 años y soy oriundo de El Carmen de Bolívar, Bolívar. Para mí, es un
+          placer que visites mi página web. Puedes encontrarme en mi canal de YouTube @sabiduriadeloalto donde
+          seguiré subiendo más videos relacionados con la misma temática. Muchas gracias por tu atención.</p>
+        <p>Para más información contactarme al correo electrónico: <a
+            href="mailto:sabiduriadeloalto03@gmail.com">sabiduriadeloalto03@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        const videos = {
-            "Videos Recientes": [
-                { id: "eIM5SGKw9b0", title: "La música y sus verdades" },
-                { id: "Jp4FWhk6j9Y", title: "¿Usted sabía que hay canciones cristianas diabólicas?" },
-                { id: "ApZ3v5UWVD4", title: "El clásico y el actual" }
-            ],
-            "Videos de Amor": [
-                { id: "FXAfUFhafsI", title: "Amor Divino" },
-                { id: "ajsbFJdOZGE", title: "El Poder del Amor" }
-            ],
-            "Videos de Fe": [
-                { id: "W3yi54Z5Fk4", title: "Fortalecer la Fe" }
-            ],
-            "Videos de Abundancia": [
-                { id: "p8vA9Hj88HM", title: "Prosperidad Espiritual" }
-            ],
-            "Videos de Felicidad": [
-                { id: "kZ-gw26lFcw", title: "Alegría en Cristo" },
-                { id: "zrSDG4DGSHc", title: "Gozo Espiritual" },
-                { id: "_vbws3WZ4sY", title: "Felicidad Verdadera" },
-                { id: "NTr_l9bdhZA", title: "Paz Interior" },
-                { id: "LKYuKL5MyXU", title: "Vivir con Propósito" }
-            ],
-            "Videos de Intimidad con Dios": [
-                { id: "H_05FmHcqlM", title: "Cercanía Divina" },
-                { id: "2z1pKAVoJMk", title: "Comunión con Dios" },
-                { id: "oTLZ2Tk5QPs", title: "Oración Profunda" },
-                { id: "TPLzAGD5H6M", title: "Presencia de Dios" }
-            ]
-        };
+  <div class="welcome-modal" id="welcomeModal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Bienvenido a Sabiduría de lo Alto</h2>
+    <p>Por favor regístrate para estar informado de cualquier novedad de nuestra página web y de nuestro canal de YouTube @sabiduriadeloalto</p>
+    <input type="text" id="name" placeholder="Nombre" required>
+    <input type="text" id="lastName" placeholder="Apellido" required>
+    <input type="email" id="email" placeholder="Correo electrónico" required>
+    <button onclick="register()">Registrarse</button>
+  </div>
 
-        let currentVideoIndex = 0;
-        let currentCategory = "";
+  <div class="visit-counter">
+    ¡Nuestro sitio ha sido visitado <span id="visitCount"></span> veces!
+  </div>
 
-        function loadVideos() {
-            const panel = document.getElementById('videoPanel');
-            panel.innerHTML = '';
+  <script>
+    const videos = {
+      "Videos Recientes": [
+        { id: "eIM5SGKw9b0", title: "La música y sus verdades" },
+        { id: "Jp4FWhk6j9Y", title: "¿Usted sabía que hay canciones cristianas diabólicas?" },
+        { id: "ApZ3v5UWVD4", title: "El clásico y el actual" }
+      ],
+      "Videos de Amor": [
+        { id: "FXAfUFhafsI", title: "Amor Divino" },
+        { id: "ajsbFJdOZGE", title: "El Poder del Amor" }
+      ],
+      "Videos de Fe": [
+        { id: "W3yi54Z5Fk4", title: "Fortalecer la Fe" }
+      ],
+      "Videos de Abundancia": [
+        { id: "p8vA9Hj88HM", title: "Prosperidad Espiritual" }
+      ],
+      "Videos de Felicidad": [
+        { id: "kZ-gw26lFcw", title: "Alegría en Cristo" },
+        { id: "zrSDG4DGSHc", title: "Gozo Espiritual" },
+        { id: "_vbws3WZ4sY", title: "Felicidad Verdadera" },
+        { id: "NTr_l9bdhZA", title: "Paz Interior" },
+        { id: "LKYuKL5MyXU", title: "Vivir con Propósito" }
+      ],
+      "Videos de Intimidad con Dios": [
+        { id: "H_05FmHcqlM", title: "Cercanía Divina" },
+        { id: "2z1pKAVoJMk", title: "Comunión con Dios" },
+        { id: "oTLZ2Tk5QPs", title: "Oración Profunda" },
+        { id: "TPLzAGD5H6M", title: "Presencia de Dios" }
+      ]
+    };
 
-            for (const [category, videoList] of Object.entries(videos)) {
-                const section = document.createElement('div');
-                section.className = 'video-section';
-                section.innerHTML = `<h3>${category}</h3>`;
+    let currentVideoIndex = 0;
+    let currentCategory = "";
 
-                const ul = document.createElement('ul');
-                ul.className = 'video-list';
+    function loadVideos() {
+      const panel = document.getElementById('videoPanel');
+      panel.innerHTML = '';
 
-                videoList.forEach((video, index) => {
-                    const li = document.createElement('li');
-                    li.textContent = video.title;
-                    li.onclick = () => playVideo(category, index);
-                    ul.appendChild(li);
-                });
+      for (const [category, videoList] of Object.entries(videos)) {
+        const section = document.createElement('div');
+        section.className = 'video-section';
+        section.innerHTML = `<h3>${category}</h3>`;
 
-                section.appendChild(ul);
-                panel.appendChild(section);
-            }
+        const ul = document.createElement('ul');
+        ul.className = 'video-list';
+
+        videoList.forEach((video, index) => {
+          const li = document.createElement('li');
+          li.textContent = video.title;
+          li.onclick = () => playVideo(category, index);
+          ul.appendChild(li);
+        });
+
+        section.appendChild(ul);
+        panel.appendChild(section);
+      }
+    }
+
+    function playVideo(category, index) {
+      currentCategory = category;
+      currentVideoIndex = index;
+      const video = videos[category][index];
+      document.getElementById('currentVideo').src = `https://www.youtube.com/embed/${video.id}`;
+    }
+
+    function searchVideos() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      for (const [category, videoList] of Object.entries(videos)) {
+        const foundIndex = videoList.findIndex(video => video.title.toLowerCase().includes(query));
+        if (foundIndex !== -1) {
+          playVideo(category, foundIndex);
+          return;
         }
+      }
+      alert("No se encontraron videos con ese título.");
+    }
 
-        function playVideo(category, index) {
-            currentCategory = category;
-            currentVideoIndex = index;
-            const video = videos[category][index];
-            document.getElementById('currentVideo').src = `https://www.youtube.com/embed/${video.id}`;
-        }
+    function closeModal() {
+      document.getElementById('welcomeModal').style.display = 'none';
+    }
 
-        function searchVideos() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            for (const [category, videoList] of Object.entries(videos)) {
-                const foundIndex = videoList.findIndex(video => video.title.toLowerCase().includes(query));
-                if (foundIndex !== -1) {
-                    playVideo(category, foundIndex);
-                    return;
-                }
-            }
-            alert("No se encontraron videos con ese título.");
-        }
+    function register() {
+      const name = document.getElementById('name').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
 
-        window.onload = () => {
-            loadVideos();
-            playVideo("Videos Recientes", 0);
-        };
-    </script>
-  
-  
- <div id="sfcx592n5brrf7g9fqruyqxpj3qdeph57y8"></div>
-<script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=x592n5brrf7g9fqruyqxpj3qdeph57y8&down=async" async></script>
-<noscript><a href="https://www.contadorvisitasgratis.com" title="contador web"><img src="https://counter6.optistats.ovh/private/contadorvisitasgratis.php?c=x592n5brrf7g9fqruyqxpj3qdeph57y8" border="0" title="contador web" alt="contador web"></a></noscript>
-   
+      if (name && lastName && email) {
+        alert('Gracias por registrarte');
+        closeModal();
+        
+      } else {
+        alert('Por favor, completa todos los campos');
+      }
+    }
 
-   
+    function updateVisitCount() {
+      let count = localStorage.getItem('visitCount');
+      if (count === null) {
+        count = 99897898;
+      } else {
+        count = parseInt(count) + 1;
+      }
+      localStorage.setItem('visitCount', count);
+      document.getElementById('visitCount').textContent = count.toLocaleString(); 
+    }
+
+    window.onload = () => {
+      loadVideos();
+      playVideo("Videos Recientes", 0);
+      updateVisitCount();
+    };
+  </script>
 </body>
- 
- 
-  
 </html>
