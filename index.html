@@ -209,12 +209,44 @@
       font-weight: bold;
       color: #000;
     }
+
+    #welcomeForm {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    #welcomeForm iframe {
+      width: 100%;
+      height: 735px;
+      border: none;
+    }
+
+    #closeForm {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
+  <div id="welcomeForm">
+    <span id="closeForm" onclick="closeForm()">&times;</span>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLbT8sdxWf3gAd1wtZPUOz5H_GY-WxhYPTmzr7RRCKmnF4ew/viewform?embedded=true" width="640" height="735" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+  </div>
+
   <div class="container">
     <div class="left-panel" id="videoPanel">
       <!-- Secciones de vídeo -->
@@ -338,22 +370,8 @@
       alert("No se encontraron videos con ese título.");
     }
 
-    function closeModal() {
-      document.getElementById('welcomeModal').style.display = 'none';
-    }
-
-    function register() {
-      const name = document.getElementById('name').value;
-      const lastName = document.getElementById('lastName').value;
-      const email = document.getElementById('email').value;
-
-      if (name && lastName && email) {
-        alert('Gracias por registrarte');
-        closeModal();
-        
-      } else {
-        alert('Por favor, completa todos los campos');
-      }
+    function closeForm() {
+      document.getElementById('welcomeForm').style.display = 'none';
     }
 
     function updateVisitCount() {
@@ -374,5 +392,4 @@
     };
   </script>
 </body>
- 
 </html>
