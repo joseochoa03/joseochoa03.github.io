@@ -1,65 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <base href="https://joseochoa1995.github.io/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabiduría de lo Alto - Canal de YouTube</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <base href="https://joseochoa1995.github.io/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabiduría de lo Alto - Canal de YouTube</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="welcomeForm">
-    <span id="closeForm" onclick="closeForm()">&times;</span>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLbT8sdxWf3gAd1wtZPUOz5H_GY-WxhYPTmzr7RRCKmnF4ew/viewform?embedded=true" width="640" height="735" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-  </div>
-
-  <div class="container">
-    <div class="left-panel" id="videoPanel">
-      <!-- Secciones de vídeo -->
+    <div id="welcomeForm">
+        <span id="closeForm" onclick="closeForm()">&times;</span>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLbT8sdxWf3gAd1wtZPUOz5H_GY-WxhYPTmzr7RRCKmnF4ew/viewform?embedded=true" width="640" height="735" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
     </div>
-    <div class="main-content">
-      <div class="intro">
-        <img src="https://github.com/joseochoa03/joseochoa03.github.io/blob/main/nuevologo.jpg?raw=true"
-          alt="Logo de Sabiduría de lo Alto" class="logo">
-        <h1>Bienvenidos a Sabiduría de lo Alto</h1>
-        <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de
-          nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras,
-          nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en
-          este viaje de descubrimiento y crecimiento espiritual.</p>
-      </div>
-      <iframe id="currentVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <div class="controls">
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Buscar videos...">
-          <button onclick="searchVideos()">Buscar</button>
+
+    <div class="container">
+        <div class="left-panel" id="videoPanel">
+            <!-- Secciones de vídeo se cargarán dinámicamente -->
         </div>
-        <button
-          onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
-      </div>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i
-            class="fab fa-facebook"></i></a>
-        <a href="https://wa.me/573005188416" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://x.com/sabiduriad95033" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-      <div class="author-info">
-        <h2>Sobre el Autor</h2>
-        <p>Apasionado por la tecnología y administrador financiero de profesión, mucho gusto. Mi nombre es José
-          Ángel Ochoa Álvarez, tengo 28 años y soy oriundo de El Carmen de Bolívar, Bolívar. Para mí, es un
-          placer que visites mi página web. Puedes encontrarme en mi canal de YouTube @sabiduriadeloalto donde
-          seguiré subiendo más videos relacionados con la misma temática. Muchas gracias por tu atención.</p>
-        <p>Para más información contactarme al correo electrónico: <a
-            href="mailto:sabiduriadeloalto03@gmail.com">sabiduriadeloalto03@gmail.com</a></p>
-      </div>
+        <div class="main-content">
+            <div class="intro">
+                <img src="https://github.com/joseochoa03/joseochoa03.github.io/blob/main/nuevologo.jpg?raw=true"
+                    alt="Logo de Sabiduría de lo Alto" class="logo">
+                <h1>Bienvenidos a Sabiduría de lo Alto</h1>
+                <p>En este canal, exploramos temas religiosos con sabiduría, buscando iluminar el camino espiritual de
+                    nuestros seguidores. A través de reflexiones profundas, análisis bíblicos y enseñanzas inspiradoras,
+                    nos esforzamos por elevar la conciencia y fortalecer la fe de nuestra comunidad. Únete a nosotros en
+                    este viaje de descubrimiento y crecimiento espiritual.</p>
+            </div>
+            <iframe id="currentVideo" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar videos...">
+                    <button onclick="searchVideos()">Buscar</button>
+                </div>
+                <button onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/573005188416" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://x.com/sabiduriad95033" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="author-info">
+                <h2>Sobre el Autor</h2>
+                <p>Apasionado por la tecnología y administrador financiero de profesión, mucho gusto. Mi nombre es José
+                    Ángel Ochoa Álvarez, tengo 28 años y soy oriundo de El Carmen de Bolívar, Bolívar. Para mí, es un
+                    placer que visites mi página web. Puedes encontrarme en mi canal de YouTube @sabiduriadeloalto donde
+                    seguiré subiendo más videos relacionados con la misma temática. Muchas gracias por tu atención.</p>
+                <p>Para más información contactarme al correo electrónico: <a
+                        href="mailto:sabiduriadeloalto03@gmail.com">sabiduriadeloalto03@gmail.com</a></p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="visit-counter">
-    ¡Nuestro sitio ha sido visitado <span id="visitCount"></span> veces!
-  </div>
+    <div class="visit-counter">
+        ¡Nuestro sitio ha sido visitado <span id="visitCount"></span> veces!
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
