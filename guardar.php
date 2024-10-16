@@ -1,6 +1,6 @@
 <?php
 // Configuración de la base de datos
-$host = 'localhost';
+$host = 'https://github.com/joseochoa03/joseochoa03.github.io/blob/main/guardar.php';
 $dbname = 'usuarios';
 $username = 'usuario';
 $password = 'contraseña';
