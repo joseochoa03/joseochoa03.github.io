@@ -242,11 +242,7 @@
 </head>
 
 <body>
-  <div id="welcomeForm">
-    <span id="closeForm" onclick="closeForm()">&times;</span>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLbT8sdxWf3gAd1wtZPUOz5H_GY-WxhYPTmzr7RRCKmnF4ew/viewform?embedded=true" width="640" height="735" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-  </div>
-
+  
   <div class="container">
     <div class="left-panel" id="videoPanel">
       <!-- Secciones de vídeo -->
@@ -270,6 +266,18 @@
         <button
           onclick="window.open('https://www.youtube.com/channel/UCfk6qU2chlpr6xm_7sC91lA?sub_confirmation=1', '_blank')">Suscribirse</button>
       </div>
+
+<div class="welcome-modal" id="welcomeModal">
+  <h2>Regístrate</h2>
+  <form action="guardar.php" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="text" name="apellido" placeholder="Apellido" required>
+    <input type="email" name="correo" placeholder="Correo Electrónico" required>
+    <button type="submit">Enviar</button>
+  </form>
+  <span onclick="closeForm()" class="close-btn">&times;</span>
+</div>
+
       <div class="social-icons">
         <a href="https://www.facebook.com/profile.php?id=61565779972067" target="_blank"><i
             class="fab fa-facebook"></i></a>
