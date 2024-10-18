@@ -1,4 +1,4 @@
-/* Estilos generales para el body y html */
+/ Estilos generales para el body y html /
 body, html {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body, html {
     min-height: 100vh;
 }
 
-/* Contenedor principal */
+/ Contenedor principal /
 .container {
     width: 90%;
     max-width: 1200px;
@@ -20,7 +20,7 @@ body, html {
     margin: 20px auto;
 }
 
-/* Panel izquierdo para videos */
+/ Panel izquierdo para videos /
 .left-panel {
     width: 300px;
     background: rgba(0, 0, 0, 0.7);
@@ -52,13 +52,13 @@ body, html {
     color: #fff;
 }
 
-/* Contenido principal */
+/ Contenido principal /
 .main-content {
     flex: 1;
     padding: 20px;
 }
 
-/* Introducción */
+/ Introducción /
 .intro {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -67,7 +67,7 @@ body, html {
     color: #fff;
 }
 
-/* Estilo para el iframe del video */
+/ Estilo para el iframe del video /
 #currentVideo {
     width: 100%;
     max-width: 800px;
@@ -76,7 +76,7 @@ body, html {
     margin: 0 auto;
 }
 
-/* Controles de búsqueda y suscripción */
+/ Controles de búsqueda y suscripción /
 .controls {
     display: flex;
     justify-content: space-between;
@@ -107,7 +107,7 @@ button:hover {
     background-color: #f39c12;
 }
 
-/* Modal de bienvenida */
+/ Modal de bienvenida /
 .welcome-modal {
     position: fixed;
     top: 50%;
@@ -161,7 +161,7 @@ button:hover {
     cursor: pointer;
 }
 
-/* Iconos sociales */
+/ Iconos sociales /
 .social-icons {
     display: flex;
     justify-content: center;
@@ -175,7 +175,7 @@ button:hover {
     font-size: 24px;
 }
 
-/* Información del autor */
+/ Información del autor /
 .author-info {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -199,7 +199,7 @@ button:hover {
     text-decoration: none;
 }
 
-/* Contador de visitas */
+/ Contador de visitas /
 .visit-counter {
     text-align: center;
     margin-top: 20px;
