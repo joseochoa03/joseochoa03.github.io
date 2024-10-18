@@ -1,35 +1,27 @@
-/ Estilos generales para el body y html /
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
 }
 
-/ Contenedor principal /
 .container {
-    width: 90%;
-    max-width: 1200px;
     display: flex;
-    flex-direction: row;
-    margin: 20px auto;
+    flex: 1;
 }
 
-/ Panel izquierdo para videos /
 .left-panel {
     width: 300px;
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     overflow-y: auto;
-    color: #fff;
 }
 
-/* Secciones de video */
 .video-section {
     margin-bottom: 20px;
 }
@@ -40,7 +32,6 @@ body, html {
     padding-bottom: 5px;
 }
 
-/* Lista de videos */
 .video-list {
     list-style-type: none;
     padding: 0;
@@ -49,25 +40,20 @@ body, html {
 .video-list li {
     margin-bottom: 10px;
     cursor: pointer;
-    color: #fff;
 }
 
-/ Contenido principal /
 .main-content {
     flex: 1;
     padding: 20px;
 }
 
-/ Introducción /
 .intro {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    color: #fff;
 }
 
-/ Estilo para el iframe del video /
 #currentVideo {
     width: 100%;
     max-width: 800px;
@@ -76,7 +62,6 @@ body, html {
     margin: 0 auto;
 }
 
-/ Controles de búsqueda y suscripción /
 .controls {
     display: flex;
     justify-content: space-between;
@@ -90,8 +75,6 @@ body, html {
 #searchInput {
     padding: 5px;
     margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 button {
@@ -107,7 +90,45 @@ button:hover {
     background-color: #f39c12;
 }
 
-/ Modal de bienvenida /
+.social-share {
+    margin-top: 20px;
+}
+
+.social-share a {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.author-info {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
 .welcome-modal {
     position: fixed;
     top: 50%;
@@ -127,6 +148,14 @@ button:hover {
     font-family: 'Playfair Display', serif;
     color: #333;
     font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.welcome-modal p {
+    font-family: 'Lato', sans-serif;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 20px;
 }
 
@@ -161,52 +190,17 @@ button:hover {
     cursor: pointer;
 }
 
-/ Iconos sociales /
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-}
-
-/ Información del autor /
-.author-info {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10 px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.author-info h2 {
-    color: #f1c40f;
-    border-bottom: 1px solid #f1c40f;
-    padding-bottom: 5px;
-}
-
-.author-info p {
-    margin-bottom: 20px;
-}
-
-.author-info a {
-    color: #f1c40f;
-    text-decoration: none;
-}
-
-/ Contador de visitas /
 .visit-counter {
     text-align: center;
     margin-top: 20px;
-    color: #666;
+    font-size: 18px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius:  5px;
 }
 
 .visit-counter span {
     font-weight: bold;
-    color: #333;
+    color: #000;
 }
