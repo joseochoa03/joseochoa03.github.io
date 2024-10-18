@@ -95,3 +95,11 @@ window.onload = () => {
   playVideo("Videos Recientes", 0);
   updateVisitCount();
 };
+
+function closeForm() {
+    document.getElementById("welcomeModal").style.display = "none";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("welcomeModal").style.display = "block";
+});
